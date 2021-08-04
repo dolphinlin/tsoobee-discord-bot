@@ -15,6 +15,9 @@ class Leetcode {
     // clean old data
     this._map.clear();
 
+    // update ttl
+    this._ttl = Date.now() + +(process.env.PROBLEM_TTL_MS ?? 1000 * 60 * 60);
+
     const res = await getAllProblem();
 
     // set problem to cache
