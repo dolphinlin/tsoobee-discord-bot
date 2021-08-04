@@ -1,4 +1,5 @@
-import typescript from '@rollup/plugin-typescript'
+import typescript from '@rollup/plugin-typescript';
+import alias from '@rollup/plugin-alias';
 
 export default {
   input: 'src/index.ts',
@@ -6,5 +7,13 @@ export default {
     dir: 'dist',
     format: 'cjs',
   },
-  plugins: [typescript()],
-}
+  plugins: [
+    typescript({
+      moduleResolution: 'node',
+      baseUrl: './',
+      paths: {
+        '@/*': ['src/*'],
+      },
+    }),
+  ],
+};

@@ -16,6 +16,13 @@
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
+"@rollup/plugin-alias@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-alias/-/plugin-alias-3.1.5.tgz#73356a3a1eab2e1e2fd952f9f53cd89fc740d952"
+  integrity sha512-yzUaSvCC/LJPbl9rnzX3HN7vy0tq7EzHoEiQl1ofh4n5r2Rd5bj/+zcJgaGA76xbw95/JjWQyvHg9rOJp2y0oQ==
+  dependencies:
+    slash "^3.0.0"
+
 "@rollup/plugin-typescript@^8.2.5":
   version "8.2.5"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-typescript/-/plugin-typescript-8.2.5.tgz#e0319761b2b5105615e5a0c371ae05bc2984b7de"
@@ -177,6 +184,11 @@ resolve@^1.17.0:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
 
+rollup-plugin-typescript-paths@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-typescript-paths/-/rollup-plugin-typescript-paths-1.3.0.tgz#1e1e19def390681ad0002388d5181dc71274a057"
+  integrity sha512-2Y8Yh62uDemaSsCU/jVSb42t4G7SlWup5iXxOvOtvWrERo49juewqC5A5tsVrLRErGMv2f00E7j3zXXaWZ+9mA==
+
 rollup@^2.55.1:
   version "2.55.1"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.55.1.tgz#66a444648e2fb603d8e329e77a61c608a6510fda"
@@ -188,6 +200,11 @@ setimmediate@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/setimmediate/-/setimmediate-1.0.5.tgz#290cbb232e306942d7d7ea9b83732ab7856f8285"
   integrity sha1-KQy7Iy4waULX1+qbg3Mqt4VvgoU=
+
+slash@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
+  integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
 tslib@^2.3.0:
   version "2.3.0"
