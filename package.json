@@ -1,0 +1,7 @@
+{
+  "name": "tsoobee-discord-bot",
+  "version": "1.0.0",
+  "description": "a bot for tsoobee discord server",
+  "main": "index.js",
+  "license": "MIT"
+}
