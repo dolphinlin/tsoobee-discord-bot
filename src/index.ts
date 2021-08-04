@@ -1,20 +1,26 @@
 import { Client } from 'discord.js';
 
+import leetcode from '@/lib/leetcode';
+
+import commander from './command';
+
 const client = new Client();
 
 // ready listener
 client.on('ready', () => {
   console.log(`slack bot is ready: ${new Date().toISOString()}`);
+
+  leetcode.reload();
 });
 
-const CMD = '!leet';
+const validPrefix = '!leet';
 // msg listener
 client.on('message', msg => {
   // e.g. CMD xxx xxx
-  const [prefix, ...args] = msg.content.split(' ');
+  const [prefix, cmd, ...args] = msg.content.split(' ');
 
-  if (prefix === CMD) {
-    msg.channel.send(`get cmd with params: ${args.join(', ')}`);
+  if (prefix === validPrefix) {
+    commander(cmd, args, msg);
   }
 });
 
