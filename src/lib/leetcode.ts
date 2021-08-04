@@ -27,6 +27,8 @@ class Leetcode {
     });
 
     console.log(`reload problem success, count: ${res.data.num_total}`);
+
+    return res.data;
   }
 
   getProblem(serial: number): Pair | null {
