@@ -23,6 +23,7 @@ const getProblem: Command<void> = {
 
     if (serial !== (+serial).toString()) {
       message.channel.send(`Invalid serial of problem: ${serial}`);
+      return;
     }
 
     const problem = leetcode.getProblem(+serial);
