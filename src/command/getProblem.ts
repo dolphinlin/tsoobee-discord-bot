@@ -18,11 +18,12 @@ function getDifficultyString(diff: Difficulty) {
 
 const getProblem: Command<void> = {
   name: 'get',
+  description: `get leetcode problem by serial number. !leet get [serial number]`,
   resolve: (args, message) => {
     const [serial] = args;
 
     if (serial !== (+serial).toString()) {
-      message.channel.send(`Invalid serial of problem: ${serial}`);
+      message.channel.send(`Invalid serial number of problem: ${serial}`);
       return;
     }
 
@@ -33,7 +34,7 @@ const getProblem: Command<void> = {
       return;
     }
 
-    message.channel.send(`Serial: ${serial}
+    message.channel.send(`Serial Number: ${serial}
 Title: ${problem.stat.question__title}
 Difficulty: ${getDifficultyString(problem.difficulty.level)}
 URL: ${process.env.LEETCODE_PROBLEM_BASEURL}/${

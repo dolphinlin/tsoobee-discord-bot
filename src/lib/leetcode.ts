@@ -11,7 +11,7 @@ class Leetcode {
   }
 
   async reload() {
-    if (Date.now() < this._ttl) return;
+    if (Date.now() < this._ttl) return null;
     // clean old data
     this._map.clear();
 
@@ -37,6 +37,10 @@ class Leetcode {
     }
 
     return null;
+  }
+
+  getPoolTTL() {
+    return this._ttl;
   }
 }
 

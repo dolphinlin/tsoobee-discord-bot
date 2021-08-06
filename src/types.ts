@@ -10,10 +10,13 @@ export interface Pair {
     question__title: string;
     question__title_slug: string;
     frontend_question_id: number;
+    total_acs: number;
+    total_submitted: number;
   };
   difficulty: {
     level: Difficulty;
   };
+  paid_only: boolean;
 }
 
 export interface Problem {

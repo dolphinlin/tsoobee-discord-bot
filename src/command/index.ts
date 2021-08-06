@@ -9,7 +9,23 @@ const commands: Record<string, Command<any>> = {
   reload,
 };
 
+const allCmdsDesc = Object.values(commands)
+  .map(resolver => {
+    const current = [resolver.name, resolver.description];
+
+    return current.join(' - ');
+  })
+  .join('\n');
+
 function commander(cmd: string, args: string[], message: Message) {
+  // !leet help
+  if (cmd === 'help') {
+    message.channel.send(`\`\`\`
+${allCmdsDesc}
+\`\`\``);
+    return;
+  }
+
   const command = commands[cmd];
 
   if (!command) {
