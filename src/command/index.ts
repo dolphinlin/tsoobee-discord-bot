@@ -3,10 +3,12 @@ import { Message } from 'discord.js';
 import { Command } from './types';
 import getProblem from './getProblem';
 import reload from './reload';
+import dolphin from './dolphin';
 
 const commands: Record<string, Command<any>> = {
   get: getProblem,
   reload,
+  dolphin,
 };
 
 const allCmdsDesc = Object.values(commands)
